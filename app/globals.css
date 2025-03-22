@@ -1,1 +1,115 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary-lightest-02: #e3f5e4;
+  --color-primary-lightest: #c9ecce;
+  --color-primary-lighter: #9bc8a6;
+  --color-primary-light: #699177;
+  --color-primary: #2e493a;
+  --color-primary-dark: #213e31;
+  --color-primary-darker: #17342a;
+  --color-primary-darkest: #0e2a23;
+  --color-primary-darkest-02: #08231e;
+
+  --color-secondary-lightest-02: #fcf7d7;
+  --color-secondary-lightest: #faeeb0;
+  --color-secondary-lighter: #f2de86;
+  --color-secondary-light: #e5ca65;
+  --color-secondary: #d4af37;
+  --color-secondary-dark: #b69128;
+  --color-secondary-darker: #98751b;
+  --color-secondary-darkest: #7a5a11;
+  --color-secondary-darkest-02: #65470a;
+
+  --color-ghost-primary-10: #2e493a10;
+  --color-ghost-primary-20: #2e493a20;
+  --color-ghost-primary-30: #2e493a30;
+  --color-ghost-primary-40: #2e493a40;
+
+  --color-ghost-secondary-10: #d4af3710;
+  --color-ghost-secondary-20: #d4af3720;
+  --color-ghost-secondary-30: #d4af3730;
+  --color-ghost-secondary-40: #d4af3740;
+
+  --color-success-lightest: #e9f6f0;
+  --color-success-lighter: #78e3a0;
+  --color-success-light: #52c78a;
+  --color-success: #23a36d;
+  --color-success-dark: #198c67;
+  --color-success-darker: #11755f;
+  --color-success-darkest: #0b5e54;
+
+  --color-white: #fff;
+  --color-neutral-lightest: #f3f1ef;
+  --color-neutral-lighter: #dddad7;
+  --color-neutral-light: #bbb8b5;
+  --color-neutral: #8f8b89;
+  --color-neutral-dark: #7a6a64;
+  --color-neutral-darker: #664b45;
+  --color-neutral-darkest: #52312b;
+  --color-black: #101319;
+
+  --drop-shadow-sm:
+    0px 1px 1px 0px rgba(0, 0, 0, 0.11), 0px 2px 1px 0px rgba(0, 0, 0, 0.09),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.16);
+  --drop-shadow-md:
+    0px 6px 10px 0px rgba(0, 0, 0, 0.11), 0px 1px 18px 0px rgba(0, 0, 0, 0.09),
+    0px 3px 5px 0px rgba(0, 0, 0, 0.16);
+  --drop-shadow-lg:
+    0px 12px 17px 0px rgba(0, 0, 0, 0.11), 0px 5px 22px 0px rgba(0, 0, 0, 0.09),
+    0px 7px 8px 0px rgba(0, 0, 0, 0.16);
+}
+
+@layer base {
+  .display-1 {
+    @apply text-[64px] font-bold leading-[72px];
+  }
+  .display-2 {
+    @apply text-[40px] font-bold leading-[44px];
+  }
+
+  h1 {
+    @apply text-[32px] font-bold leading-[54px];
+  }
+  h2 {
+    @apply text-[24px] font-bold leading-[41px];
+  }
+  h3 {
+    @apply text-[18px] font-bold leading-[31px];
+  }
+  h4 {
+    @apply text-[16px] font-bold leading-[27px];
+  }
+  h5 {
+    @apply text-[14px] font-bold leading-[24px];
+  }
+  h6 {
+    @apply text-[12px] font-bold leading-[20px];
+  }
+
+  .paragraph-lg {
+    @apply text-[18px] font-normal leading-[31px];
+  }
+  .paragraph-md {
+    @apply text-[16px] font-normal leading-[27px];
+  }
+  .paragraph-sm {
+    @apply text-[14px] font-normal leading-[24px];
+  }
+  .paragraph-xs {
+    @apply text-[12px] font-normal leading-[20px];
+  }
+
+  .label-lg {
+    @apply text-[18px] font-bold leading-[31px];
+  }
+  .label-md {
+    @apply text-[16px] font-bold leading-[27px];
+  }
+  .label-sm {
+    @apply text-[14px] font-bold leading-[24px];
+  }
+  .label-xs {
+    @apply text-[12px] font-bold leading-[20px];
+  }
+}
