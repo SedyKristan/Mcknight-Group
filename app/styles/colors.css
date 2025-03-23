@@ -1,0 +1,55 @@
+@theme {
+  /* Forest Green */
+  --forest-green-lightest-02: #e3f5e4;
+  --forest-green-lightest: #c9ecce;
+  --forest-green-lighter: #9bc8a6;
+  --forest-green-light: #699177;
+  --forest-green: #2e493a;
+  --forest-green-dark: #213e31;
+  --forest-green-darker: #17342a;
+  --forest-green-darkest: #0e2a23;
+  --forest-green-darkest-02: #08231e;
+
+  /* Rich Gold */
+  --rich-gold-lightest-02: #fcf7d7;
+  --rich-gold-lightest: #faeeb0;
+  --rich-gold-lighter: #f2de86;
+  --rich-gold-light: #e5ca65;
+  --rich-gold: #d4af37;
+  --rich-gold-dark: #b69128;
+  --rich-gold-darker: #98751b;
+  --rich-gold-darkest: #7a5a11;
+  --rich-gold-darkest-02: #65470a;
+
+  /* Opacity - Forest Green */
+  --forest-green-10: #2e493a10;
+  --forest-green-20: #2e493a20;
+  --forest-green-30: #2e493a30;
+  --forest-green-40: #2e493a40;
+
+  /* Opacity/ - Rich Gold */
+  --rich-gold-10: #d4af3710;
+  --rich-gold-20: #d4af3720;
+  --rich-gold-30: #d4af3730;
+  --rich-gold-40: #d4af3740;
+
+  /* Green Crayola */
+  --green-crayola-lightest: #e9f6f0;
+  --green-crayola-lighter: #78e3a0;
+  --green-crayola-light: #52c78a;
+  --green-crayola: #23a36d;
+  --green-crayola-dark: #198c67;
+  --green-crayola-darker: #11755f;
+  --green-crayola-darkest: #0b5e54;
+
+  /*  Neutrals */
+  --white: #fff;
+  --philippine-gray-lightest: #f3f1ef;
+  --philippine-gray-lighter: #dddad7;
+  --philippine-gray-light: #bbb8b5;
+  --philippine-gray: #8f8b89;
+  --philippine-gray-dark: #7a6a64;
+  --philippine-gray-darker: #664b45;
+  --philippine-gray-darkest: #52312b;
+  --chinese-black: #101319;
+}

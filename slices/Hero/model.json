@@ -44,6 +44,14 @@
             "constraint": {},
             "thumbnails": []
           }
+        },
+        "logo": {
+          "type": "Image",
+          "config": {
+            "label": "Logo",
+            "constraint": {},
+            "thumbnails": []
+          }
         }
       },
       "items": {}

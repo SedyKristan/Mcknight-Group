@@ -2,7 +2,7 @@ import { FC } from "react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 
-import Default from "./Default";
+import Default from "./Variants/Default";
 
 /**
  * Props for `Hero`.
