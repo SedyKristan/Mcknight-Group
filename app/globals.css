@@ -62,6 +62,7 @@
     0px 7px 8px 0px rgba(0, 0, 0, 0.16);
 
   --divider-dark-default: rgba(255, 255, 255, 0.1);
+  --divider-light-default: rgba(0, 0, 0, 0.1);
 
   --theme-primary-gradient: linear-gradient(
     1deg,
@@ -78,6 +79,7 @@
   --text-primary: var(--color-black);
   --text-secondary: var(--color-neutral);
   --text-tertiary: var(--color-neutral-light);
+  --text-primary-dark: var(--color-white);
   --text-brand: var(--color-primary);
 
   --animate-slide-in-from-right: slide-in-from-right 300ms ease-out forwards;
@@ -88,6 +90,8 @@
   --animate-slide-out-to-top: slide-out-to-top 300ms ease-in forwards;
   --animate-slide-in-from-bottom: slide-in-from-bottom 300ms ease-out forwards;
   --animate-slide-out-to-bottom: slide-out-to-bottom 300ms ease-in forwards;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-accordion-down: accordion-down 0.2s ease-out;
 }
 
 @layer base {
@@ -96,10 +100,10 @@
   }
 
   .display-1 {
-    @apply text-[64px] font-bold leading-[72px];
+    @apply text-[40px] leading-[44px] md:text-[64px] md:leading-[72px] font-bold;
   }
   .display-2 {
-    @apply text-[40px] font-bold leading-[44px];
+    @apply text-[32px] leading-[54px] md:text-[40px] md:leading-[44px] font-bold;
   }
 
   h1 {
@@ -107,7 +111,7 @@
   }
   h2,
   .tab-links {
-    @apply text-[24px] font-bold leading-[41px];
+    @apply md:text-[24px] text-[18px] font-bold leading-[31px] md:leading-[41px];
   }
   h3 {
     @apply text-[18px] font-bold leading-[31px];
@@ -146,11 +150,5 @@
   }
   .label-xs {
     @apply text-[12px] font-bold leading-[20px];
-  }
-}
-
-@layer components {
-  .container {
-    @apply flex max-w-[1200px] w-full gap-16 flex-[1_0_0];
   }
 }
