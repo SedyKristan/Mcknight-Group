@@ -15,7 +15,7 @@ const ScrollableImages = ({
 
   if (!images || images.length === 0) return null;
   return (
-    <ScrollArea className="w-full whitespace-nowrap">
+    <ScrollArea className="w-full whitespace-nowrap block lg:hidden">
       <div className="flex w-max space-x-4 px-4">
         {images.map((image, index) => (
           <div
