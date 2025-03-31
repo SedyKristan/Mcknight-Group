@@ -32,6 +32,7 @@ const Hero: FC<HeroProps> = ({ slice, index, slices, context }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      id={slice.primary.section_id ?? undefined}
     >
       <Display />
     </section>

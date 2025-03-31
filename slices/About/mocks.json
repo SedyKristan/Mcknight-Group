@@ -3,11 +3,6 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
 		"primary": {
-			"section_uid": {
-				"__TYPE__": "FieldContent",
-				"value": "sign",
-				"type": "Text"
-			},
 			"headline": {
 				"__TYPE__": "FieldContent",
 				"value": "poetry",
@@ -62,6 +57,11 @@
 						]
 					}
 				]
+			},
+			"section_id": {
+				"__TYPE__": "FieldContent",
+				"value": "top",
+				"type": "Text"
 			}
 		},
 		"items": []

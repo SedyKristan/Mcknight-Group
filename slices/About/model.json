@@ -12,10 +12,10 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "section_uid": {
+        "section_id": {
           "type": "Text",
           "config": {
-            "label": "Section UID",
+            "label": "Section ID",
             "placeholder": ""
           }
         },

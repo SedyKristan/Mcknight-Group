@@ -24,7 +24,10 @@ const Default: FC<DefaultProps> = ({ slice, index, slices, context }) => {
           <CardsDesktop cards={slice.primary.services} />
         </Container>
       </Section>
-      <section className="lg:hidden flex py-10 justify-center items-center self-stretch border-b-2 border-[var(--divider-light-default)]">
+      <section
+        id="about-mobile"
+        className="lg:hidden flex py-10 justify-center items-center self-stretch border-b-2 border-[var(--divider-light-default)]"
+      >
         <Container className="!gap-4">
           <SectionWrapper className="px-4">
             <SectionHeadline>{slice.primary.headline}</SectionHeadline>

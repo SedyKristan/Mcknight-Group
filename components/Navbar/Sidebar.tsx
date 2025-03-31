@@ -2,6 +2,7 @@
 
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetHeader,
   SheetTitle,
@@ -19,9 +20,10 @@ type NavItem = {
 
 type SidebarProps = {
   settings: Content.SettingsDocument<string>;
+  onNavigate?: (sectionId: string) => void;
 };
 
-const Sidebar = ({ settings }: SidebarProps) => {
+const Sidebar = ({ settings, onNavigate }: SidebarProps) => {
   const navigations = settings.data.navigation as NavItem[];
   const ctaButton = navigations.find((item) => item.cta_button);
   const regularNavItems = navigations.filter((item) => !item.cta_button);
@@ -46,13 +48,16 @@ const Sidebar = ({ settings }: SidebarProps) => {
         <nav className="flex pt-6 flex-col justify-between flex-auto self-stretch">
           <div className="flex flex-col self-stretch items-start">
             {regularNavItems.map((item, index) => (
-              <a
-                key={index}
-                href={`#${item.section_id}`}
-                className="flex py-6 pr-5 pl-6 tab-links text-[var(--color-neutral-light)]"
-              >
-                {item.label}
-              </a>
+              <SheetClose asChild key={index}>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start"
+                  size="sm"
+                  onClick={() => item.section_id && onNavigate?.(item.section_id)}
+                >
+                  {item.label}
+                </Button>
+              </SheetClose>
             ))}
           </div>
 

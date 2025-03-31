@@ -217,14 +217,14 @@ export interface AboutSliceDefaultPrimaryServicesItem {
  */
 export interface AboutSliceDefaultPrimary {
   /**
-   * Section UID field in *About → Default → Primary*
+   * Section ID field in *About → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: about.default.primary.section_uid
+   * - **API ID Path**: about.default.primary.section_id
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  section_uid: prismic.KeyTextField;
+  section_id: prismic.KeyTextField;
 
   /**
    * Headline field in *About → Default → Primary*
