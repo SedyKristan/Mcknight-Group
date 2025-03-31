@@ -34,6 +34,16 @@ const Navbar = ({ settings }: NavbarProps) => {
       className={`fixed flex w-screen h-[68px] px-4 justify-center items-center z-50 transition-colors duration-200 ${isScrolled ? "bg-primary" : ""}`}
     >
       <div className="flex max-w-[1280px] w-full justify-between items-center">
+        <ul className="flex items-center gap-3 self-stretch">
+          {navigations.map((navigation, index) => (
+            <li
+              key={index}
+              className="nav-links px-4 py-2 text-[var(--text-primary-dark)]"
+            >
+              {navigation.label}
+            </li>
+          ))}
+        </ul>
         <div className="flex items-center gap-4">
           {ctaButton.map((navigation, index) => (
             <Button key={index} size="sm">
@@ -43,12 +53,6 @@ const Navbar = ({ settings }: NavbarProps) => {
         </div>
         <Sidebar settings={settings} />
       </div>
-
-      {/* <ul>
-        {navigations.map((navigation, index) => (
-          <li key={index}>{navigation.label}</li>
-        ))}
-      </ul> */}
     </nav>
   );
 };

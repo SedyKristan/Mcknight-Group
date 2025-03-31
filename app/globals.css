@@ -121,7 +121,8 @@
   h3 {
     @apply text-[18px] font-bold leading-[31px];
   }
-  h4 {
+  h4,
+  .nav-links {
     @apply text-[16px] font-bold leading-[27px];
   }
   h5 {
