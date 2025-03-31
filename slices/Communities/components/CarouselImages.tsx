@@ -49,8 +49,8 @@ const CarouselImages = ({
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-white text-[var(--text-primary)]" />
-      <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-white text-[var(--text-primary)]" />
+      <CarouselPrevious className="absolute cursor-pointer left-4 top-1/2 -translate-y-1/2 bg-white text-[var(--text-primary)]" />
+      <CarouselNext className="absolute cursor-pointer right-4 top-1/2 -translate-y-1/2 bg-white text-[var(--text-primary)]" />
       <div className="absolute bottom-4 left-0 right-0">
         <div className="flex items-center justify-center gap-2">
           {images.map((_, index) => (

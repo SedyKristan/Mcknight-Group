@@ -76,6 +76,14 @@
     var(--color-white) 155.11%
   );
 
+  --team-gradient:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) -10.74%,
+      var(--color-primary-lighter) 602.3%
+    ),
+    var(--color-primary-darkest);
+
   --background-primary: var(--color-white);
   --background-secondary: var(--color-neutral-lightest);
   --background-brand: var(--color-primary);
