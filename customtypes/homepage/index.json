@@ -18,6 +18,12 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "contacts": {
+              "type": "SharedSlice"
+            },
+            "team": {
+              "type": "SharedSlice"
+            },
             "communities": {
               "type": "SharedSlice"
             },

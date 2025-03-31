@@ -1,0 +1,54 @@
+{
+  "id": "contacts",
+  "type": "SharedSlice",
+  "name": "Contacts",
+  "description": "Contacts",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "section_id": {
+          "type": "Text",
+          "config": {
+            "label": "Section ID",
+            "placeholder": ""
+          }
+        },
+        "headline": {
+          "type": "Text",
+          "config": {
+            "label": "Headline",
+            "placeholder": ""
+          }
+        },
+        "address": {
+          "type": "Text",
+          "config": {
+            "label": "Address",
+            "placeholder": ""
+          }
+        },
+        "contact_number": {
+          "type": "Text",
+          "config": {
+            "label": "Contact Number",
+            "placeholder": ""
+          }
+        },
+        "email_address": {
+          "type": "Text",
+          "config": {
+            "label": "Email Address",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

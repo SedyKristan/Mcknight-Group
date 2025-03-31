@@ -1,0 +1,34 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"section_id": {
+				"__TYPE__": "FieldContent",
+				"value": "usual",
+				"type": "Text"
+			},
+			"headline": {
+				"__TYPE__": "FieldContent",
+				"value": "doll",
+				"type": "Text"
+			},
+			"address": {
+				"__TYPE__": "FieldContent",
+				"value": "lack",
+				"type": "Text"
+			},
+			"contact_number": {
+				"__TYPE__": "FieldContent",
+				"value": "surrounded",
+				"type": "Text"
+			},
+			"email_address": {
+				"__TYPE__": "FieldContent",
+				"value": "box",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]
