@@ -7,7 +7,7 @@ const Section: FC<{ children: React.ReactNode; className?: string }> = ({
 }) => {
   return (
     <section
-      className={`flex px-4 py-10 overflow-hidden justify-center items-center self-stretch border-2 border-[var(--divider-light-default)] ${className}`}
+      className={`flex px-4 lg:px-10 py-10 lg:py-[112px] overflow-hidden justify-center items-center self-stretch border-b border-[var(--divider-light-default)] ${className}`}
     >
       {children}
     </section>
