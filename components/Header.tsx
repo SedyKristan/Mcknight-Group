@@ -6,7 +6,7 @@ const Header = async () => {
   const settings = await client.getSingle("settings");
 
   return (
-    <header className="fixed flex w-screen h-[100px] py-6 px-4 justify-center items-center z-50">
+    <header>
       <Navbar settings={settings} />
     </header>
   );

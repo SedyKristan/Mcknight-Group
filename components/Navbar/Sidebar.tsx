@@ -29,9 +29,12 @@ const Sidebar = ({ settings }: SidebarProps) => {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <button className="lg:hidden">
+        <Button variant="outline" size="icon">
+          <BurgerMenuSolid className="h-5 w-5" />
+        </Button>
+        {/* <button className="lg:hidden">
           <BurgerMenuSolid className="h-10 w-10 text-neutral-light" />
-        </button>
+        </button> */}
       </SheetTrigger>
       <SheetContent
         side="right"

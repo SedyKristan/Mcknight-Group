@@ -51,10 +51,15 @@
   --color-neutral-darkest: var(--philippine-gray-darkest);
   --color-black: var(--chinese-black);
 
+  --color-white-10: var(--white-10);
+  --color-white-20: var(--white-20);
+  --color-white-30: var(--white-30);
+  --color-white-40: var(--white-40);
+
   --drop-shadow-sm:
     0px 1px 1px 0px rgba(0, 0, 0, 0.11), 0px 2px 1px 0px rgba(0, 0, 0, 0.09),
     0px 1px 3px 0px rgba(0, 0, 0, 0.16);
-  --drop-shadow-md:
+  --drop-shadow-lg:
     0px 6px 10px 0px rgba(0, 0, 0, 0.11), 0px 1px 18px 0px rgba(0, 0, 0, 0.09),
     0px 3px 5px 0px rgba(0, 0, 0, 0.16);
   --drop-shadow-lg:
@@ -100,10 +105,10 @@
   }
 
   .display-1 {
-    @apply text-[40px] leading-[44px] md:text-[64px] md:leading-[72px] font-bold;
+    @apply text-[40px] leading-[44px] lg:text-[64px] lg:leading-[72px] font-bold;
   }
   .display-2 {
-    @apply text-[32px] leading-[54px] md:text-[40px] md:leading-[44px] font-bold;
+    @apply text-[32px] leading-[54px] lg:text-[40px] lg:leading-[44px] font-bold;
   }
 
   h1 {
@@ -111,7 +116,7 @@
   }
   h2,
   .tab-links {
-    @apply md:text-[24px] text-[18px] font-bold leading-[31px] md:leading-[41px];
+    @apply lg:text-[24px] text-[18px] font-bold leading-[31px] lg:leading-[41px];
   }
   h3 {
     @apply text-[18px] font-bold leading-[31px];

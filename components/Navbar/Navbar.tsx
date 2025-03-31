@@ -4,6 +4,7 @@ import { Content } from "@prismicio/client";
 
 import { Button } from "../ui/button";
 import Sidebar from "./Sidebar";
+import { useEffect, useState } from "react";
 
 type NavbarProps = {
   settings: Content.SettingsDocument<string>;
@@ -15,18 +16,33 @@ const Navbar = ({ settings }: NavbarProps) => {
     (navigation) => navigation.cta_button === true
   );
 
-  console.log(ctaButton);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <nav
       aria-label="Main navigation"
-      className="flex max-w-[1200px] w-full self-stretch justify-between items-center flex-auto"
+      className={`fixed flex w-screen h-[68px] px-4 justify-center items-center z-50 transition-colors duration-200 ${isScrolled ? "bg-primary" : ""}`}
     >
-      <div className="flex items-center gap-4">
-        {ctaButton.map((navigation, index) => (
-          <Button key={index}>{navigation.label}</Button>
-        ))}
+      <div className="flex max-w-[1280px] w-full justify-between items-center">
+        <div className="flex items-center gap-4">
+          {ctaButton.map((navigation, index) => (
+            <Button key={index} size="sm">
+              {navigation.label}
+            </Button>
+          ))}
+        </div>
+        <Sidebar settings={settings} />
       </div>
-      <Sidebar settings={settings} />
 
       {/* <ul>
         {navigations.map((navigation, index) => (
