@@ -13,7 +13,7 @@ const Default: FC<DefaultProps> = ({ slice, index, slices, context }) => {
       <div className="container">
         <div className="flex flex-col justify-center items-center gap-16 flex-1">
           {slice.primary.logo?.url && (
-            <div className="relative h-[195px] w-[252px]">
+            <div className="relative h-[195px] w-[252px] lg:w-[334px] lg:h-[259px]">
               <PrismicNextImage
                 field={slice.primary.logo}
                 fill
@@ -22,13 +22,13 @@ const Default: FC<DefaultProps> = ({ slice, index, slices, context }) => {
               />
             </div>
           )}
-          <div className="flex justify-center items-center gap-8 self-stretch">
+          <div className="flex justify-center items-center gap-8 lg:gap-16 self-stretch">
             {slice.primary.taglines.map((tagline, index) => (
               <Fragment key={index}>
                 <h2 className="opacity-80  text-white">{tagline.word}</h2>
-                {index < slice.primary.taglines.length - 1 && (
-                  <div className="hidden h-full w-[2px] bg-[var(--divider-dark-default)]" />
-                )}
+                {/* {index < slice.primary.taglines.length - 1 && (
+                  <div className="hidden opacity-[0.54] lg:block h-10 w-[2px] bg-white" />
+                )} */}
               </Fragment>
             ))}
           </div>
