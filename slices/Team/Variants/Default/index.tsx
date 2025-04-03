@@ -1,5 +1,5 @@
 import Container from "@/components/Container";
-import { Section, SectionHeadline } from "@/components/Section";
+import { Section, SectionHeadline, SectionWrapper } from "@/components/Section";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import ScrollableCards from "../../components/ScollableCards";
@@ -10,8 +10,8 @@ export type TeamProps = SliceComponentProps<Content.TeamSlice>;
 
 const Default = ({ slice, index, slices, context }: TeamProps) => {
   return (
-    <Section
-      className="relative"
+    <section
+      className="relative overflow-hidden flex py-10 lg:py-[112px] justify-center items-center self-stretch border-b-2 border-[var(--divider-light-default)]"
       style={{ background: "var(--team-gradient)" }}
     >
       <Image
@@ -21,13 +21,15 @@ const Default = ({ slice, index, slices, context }: TeamProps) => {
         height={1024}
         className="absolute top-1/2 scale-[1.2] -translate-y-1/2 -translate-x-1/2 left-1/2 min-w-[1440px] min-h-[1024px] object-contain"
       />
-      <Container>
-        <SectionHeadline align="center" className="w-full " theme="dark">
-          {slice.primary.headline}
-        </SectionHeadline>
+      <Container className="!gap-4 !max-w-fit">
+        <SectionWrapper className="px-4">
+          <SectionHeadline align="center" className="w-full " theme="dark">
+            {slice.primary.headline}
+          </SectionHeadline>
+        </SectionWrapper>
         <ScrollableCards cards={slice.primary.cards} />
       </Container>
-    </Section>
+    </section>
   );
 };
 

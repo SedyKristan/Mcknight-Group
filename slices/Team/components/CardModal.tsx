@@ -23,14 +23,23 @@ const CardModal = ({
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent className="flex overflow-hidden p-0 bg-white w-[90vw] flex-col justify-center items-center rounded-2xl border border-black/10 shadow-[var(--drop-shadow-lg)]">
         <div className="flex h-[287px] items-center self-stretch">
-          <PrismicImage field={card.portrait} className="w-full object-cover" />
+          {card.portrait && (
+            <PrismicImage
+              field={card.portrait}
+              className="w-full object-cover"
+            />
+          )}
         </div>
         <div className="flex px-5 pt-5 pb-8 flex-col gap-4 self-stretch">
           <DialogHeader className="flex flex-col self-stretch gap-0">
             <DialogTitle>{card.name}</DialogTitle>
-            <h3 className="modal-subtitle ">{card.position}</h3>
+            {card.position && (
+              <h3 className="modal-subtitle ">{card.position}</h3>
+            )}
           </DialogHeader>
-          <DialogDescription>{asText(card.details)}</DialogDescription>
+          {card.details && (
+            <DialogDescription>{asText(card.details)}</DialogDescription>
+          )}
         </div>
       </DialogContent>
     </Dialog>
