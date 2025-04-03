@@ -39,7 +39,7 @@ const CarouselImages = ({
 
   return (
     <Carousel
-      className="hidden relative lg:flex max-w-[696px] bg-ghost-primary-40 self-stretch rounded-2xl border border-ghost-primary-40"
+      className="hidden relative lg:flex max-w-[696px] min-w-[696px] w-full bg-ghost-primary-40 self-stretch rounded-2xl border border-ghost-primary-40"
       setApi={setApi}
     >
       <CarouselContent>
