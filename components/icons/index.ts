@@ -6,3 +6,6 @@ export { Solid as RulerLSolid } from "./ruler-l";
 export { Solid as UsersSolid } from "./users";
 export { Solid as LocationSolid } from "./location";
 export { Solid as BillSolid } from "./bill";
+export { Solid as PhoneSolid } from "./phone";
+export { Solid as MailSolid } from "./mail";
+export { Solid as LogoSolid } from "./logo";

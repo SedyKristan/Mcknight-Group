@@ -30,7 +30,7 @@ const CarouselImages = ({
 
   if (!images || images.length === 0)
     return (
-      <div className="hidden relative lg:flex justify-center items-center max-w-[576px] w-full bg-ghost-primary-40 self-stretch rounded-2xl border border-ghost-primary-40">
+      <div className="hidden relative lg:flex justify-center items-center max-w-[696px] w-full bg-ghost-primary-40 self-stretch rounded-2xl border border-ghost-primary-40">
         <p className="text-[var(--text-secondary)] italic">
           No images available
         </p>
@@ -39,7 +39,7 @@ const CarouselImages = ({
 
   return (
     <Carousel
-      className="hidden relative lg:flex max-w-[576px] bg-ghost-primary-40 self-stretch rounded-2xl border border-ghost-primary-40"
+      className="hidden relative lg:flex max-w-[696px] bg-ghost-primary-40 self-stretch rounded-2xl border border-ghost-primary-40"
       setApi={setApi}
     >
       <CarouselContent>

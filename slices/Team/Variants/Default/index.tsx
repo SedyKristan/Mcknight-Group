@@ -9,7 +9,6 @@ import gridLayers from "../../../../public/grid-layers-v2.png";
 export type TeamProps = SliceComponentProps<Content.TeamSlice>;
 
 const Default = ({ slice, index, slices, context }: TeamProps) => {
-  console.log(slice.primary.cards);
   return (
     <Section
       className="relative"

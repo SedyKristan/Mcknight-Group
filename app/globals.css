@@ -59,7 +59,7 @@
   --drop-shadow-sm:
     0px 1px 1px 0px rgba(0, 0, 0, 0.11), 0px 2px 1px 0px rgba(0, 0, 0, 0.09),
     0px 1px 3px 0px rgba(0, 0, 0, 0.16);
-  --drop-shadow-lg:
+  --drop-shadow-md:
     0px 6px 10px 0px rgba(0, 0, 0, 0.11), 0px 1px 18px 0px rgba(0, 0, 0, 0.09),
     0px 3px 5px 0px rgba(0, 0, 0, 0.16);
   --drop-shadow-lg:
@@ -105,6 +105,10 @@
   --animate-slide-out-to-bottom: slide-out-to-bottom 300ms ease-in forwards;
   --animate-accordion-up: accordion-up 0.2s ease-out;
   --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-dialog-overlay: fade-in 200ms ease-out;
+  --animate-dialog-content: enter 200ms ease-out;
+  --animate-dialog-overlay-out: fade-out 200ms ease-in;
+  --animate-dialog-content-out: exit 200ms ease-in;
 }
 
 @layer base {
@@ -119,15 +123,17 @@
     @apply text-[32px] leading-[54px] lg:text-[40px] lg:leading-[44px] font-bold;
   }
 
-  h1 {
+  h1,
+  .modal-title {
     @apply text-[32px] font-bold leading-[54px];
   }
   h2,
-  .tab-links {
+  .tab-links,
+  .modal-subtitle {
     @apply lg:text-[24px] text-[18px] font-bold leading-[31px] lg:leading-[41px];
   }
   h3 {
-    @apply text-[18px] font-bold leading-[31px];
+    @apply text-[16px] leading-[27px] lg:text-[18px] font-bold lg:leading-[31px];
   }
   h4,
   .nav-links {
@@ -143,7 +149,8 @@
   .paragraph-lg {
     @apply text-[18px] font-normal leading-[31px];
   }
-  .paragraph-md {
+  .paragraph-md,
+  .modal-description {
     @apply text-[16px] font-normal leading-[27px];
   }
   .paragraph-sm {

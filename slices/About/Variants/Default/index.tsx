@@ -13,7 +13,7 @@ export type DefaultProps = SliceComponentProps<Content.AboutSlice>;
 const Default: FC<DefaultProps> = ({ slice, index, slices, context }) => {
   return (
     <Fragment>
-      <Section className="!hidden lg:!flex">
+      <Section className="!hidden lg:!flex bg-ghost-primary-10">
         <Container direction="row">
           <SectionWrapper>
             <SectionHeadline>{slice.primary.headline}</SectionHeadline>
