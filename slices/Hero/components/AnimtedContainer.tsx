@@ -9,7 +9,7 @@ const AnimatedContainer = ({ slice }: { slice: Content.HeroSlice }) => {
     <div className="container">
       <div className="flex flex-col justify-center items-center gap-16 flex-1">
         {slice.primary.logo?.url && (
-          <AnimatedLogo className="relative h-[195px] w-[252px] lg:w-[334px] text-white lg:h-[259px]" />
+          <AnimatedLogo className="relative h-auto w-[252px] lg:w-[30vw] text-white" />
         )}
         {slice.primary.taglines.length > 0 && (
           <div className="flex justify-center items-center gap-8 lg:gap-16 self-stretch">

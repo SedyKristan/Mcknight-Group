@@ -173,3 +173,13 @@
     @apply text-[12px] font-bold leading-[20px];
   }
 }
+
+@layer components {
+  .fluid-logo-width {
+    width: calc(252px + (334 - 252) * ((100vw - 320px) / (1440 - 320)));
+    min-width: 252px;
+    max-width: 60vw;
+    height: auto;
+    aspect-ratio: 334/260;
+  }
+}

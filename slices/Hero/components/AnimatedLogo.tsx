@@ -20,7 +20,7 @@ export const AnimatedLogo = ({ className }: AnimatedLogoProps) => {
       transition: {
         duration: 0.8,
         ease: "easeOut",
-        delay: 3, // Start after logo animation completes
+        delay: 2, // Start after logo animation completes
       },
     },
   };
@@ -39,9 +39,9 @@ export const AnimatedLogo = ({ className }: AnimatedLogoProps) => {
       stroke: "rgba(255, 255, 255, 0)",
       transition: {
         opacity: { duration: 0.5 },
-        pathLength: { duration: 2, ease: "easeInOut", delay: 0.5 },
-        fill: { duration: 2, ease: "easeInOut", delay: 2.5 },
-        stroke: { duration: 0.5, ease: "easeInOut", delay: 3.5 },
+        pathLength: { duration: 1, ease: "easeInOut", delay: 0.5 },
+        fill: { duration: 1, ease: "easeInOut", delay: 1.5 },
+        stroke: { duration: 0.5, ease: "easeInOut", delay: 1.5 },
       },
     },
   };
