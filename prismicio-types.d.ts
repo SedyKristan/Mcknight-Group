@@ -319,6 +319,22 @@ export interface CommunitiesSliceDefaultPrimaryCommunitiesItem {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   details: prismic.RichTextField;
+
+  /**
+   * External Link field in *Communities → Default → Primary → Communities*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: communities.default.primary.communities[].external_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  external_link: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
 }
 
 /**

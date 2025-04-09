@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import { ActiveSectionContextProvider } from "@/context/activeSectionContetxt";
 import Footer from "@/components/Footer";
 
 const geistSans = Geist({
@@ -32,13 +33,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={openSans.variable}>
+    <html lang="en" className={`${openSans.variable} !scroll-smooth`}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[var(--background-primary)] text-[var(--text-primary)]`}
       >
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <ActiveSectionContextProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </ActiveSectionContextProvider>
       </body>
     </html>
   );

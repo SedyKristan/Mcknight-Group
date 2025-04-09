@@ -22,11 +22,11 @@ const CardModal = ({
     <Dialog>
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent className="flex overflow-hidden p-0 bg-white w-[90vw] flex-col justify-center items-center rounded-2xl border border-black/10 shadow-[var(--drop-shadow-lg)]">
-        <div className="flex h-[287px] items-center self-stretch">
+        <div className="flex h-[287px] overflow-hidden items-center self-stretch border-b border-[var(--divider-light-default)]">
           {card.portrait && (
             <PrismicImage
               field={card.portrait}
-              className="w-full object-cover"
+              className="h-full object-cover"
             />
           )}
         </div>

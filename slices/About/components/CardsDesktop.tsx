@@ -8,7 +8,7 @@ const CardsDesktop = ({
   cards: GroupField<Simplify<Content.AboutSliceDefaultPrimaryServicesItem>>;
 }) => {
   return (
-    <div className="flex flex-col gap-5 w-full max-w-[576px]">
+    <div className="flex-col gap-8 w-full max-w-[576px] lg:flex hidden">
       {cards.map((card, index) => (
         <Card key={index} card={card} />
       ))}

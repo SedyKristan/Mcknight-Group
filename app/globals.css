@@ -128,14 +128,15 @@
     @apply text-[32px] font-bold leading-[54px];
   }
   h2,
-  .tab-links,
-  .modal-subtitle {
+  .tab-links {
     @apply lg:text-[24px] text-[18px] font-bold leading-[31px] lg:leading-[41px];
   }
-  h3 {
+  h3,
+  .modal-subtitle {
     @apply text-[16px] leading-[27px] lg:text-[18px] font-bold lg:leading-[31px];
   }
-  h4 {
+  h4,
+  .nav-links {
     @apply text-[16px] font-bold leading-[27px];
   }
   h5 {

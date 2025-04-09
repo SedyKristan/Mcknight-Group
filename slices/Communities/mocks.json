@@ -45,6 +45,18 @@
 										}
 									]
 								}
+							],
+							[
+								"external_link",
+								{
+									"__TYPE__": "LinkContent",
+									"key": "48ed821c-45a3-4eae-afad-70f73dbc3da3",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://google.com",
+										"text": "themselves"
+									}
+								}
 							]
 						]
 					}
@@ -67,7 +79,6 @@
 							[
 								"image",
 								{
-									"__TYPE__": "ImageContent",
 									"origin": {
 										"id": "main",
 										"url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
@@ -86,6 +97,8 @@
 										"background": "transparent"
 									},
 									"alt": "pretty",
+									"credits": null,
+									"__TYPE__": "ImageContent",
 									"thumbnails": {}
 								}
 							]

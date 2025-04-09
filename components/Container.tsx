@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utils";
+
 const Container = ({
   children,
   className,
@@ -9,7 +11,10 @@ const Container = ({
 }) => {
   return (
     <div
-      className={`flex ${direction === "row" ? "flex-row" : "flex-col"} max-w-[1280px] items-start justify-center gap-8 w-full ${className}`}
+      className={cn(
+        `flex ${direction === "row" ? "flex-row" : "flex-col"} max-w-[1280px] items-start justify-center gap-8 w-full`,
+        className
+      )}
     >
       {children}
     </div>

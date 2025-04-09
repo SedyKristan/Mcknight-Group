@@ -8,37 +8,54 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Content } from "@prismicio/client";
+import { asLink, Content, isFilled } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
-import { FC, useState } from "react";
+import { FC, useState, useEffect } from "react";
 import { transformCommunityImages } from "@/utils/transformers";
 import ScrollableImages from "../../components/ScrollableImages";
 import CarouselImages from "../../components/CarouselImages";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import { PrismicNextLink } from "@prismicio/next";
 
 export type DefaultProps = SliceComponentProps<Content.CommunitiesSlice>;
 
 const Default: FC<DefaultProps> = ({ slice, index, slices, context }) => {
-  const transformedImages = transformCommunityImages(slice.primary.images);
+  const { section_id, images } = slice.primary;
+  const sectionId = (section_id?.toString() || "communities").toLowerCase();
+  const transformedImages = transformCommunityImages(images);
   const defaultCommunity = `item-1`;
   const [selectedCommunity, setSelectedCommunity] = useState(defaultCommunity);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 1023px)");
+    const handleChange = (e: MediaQueryListEvent | MediaQueryList) => {
+      setIsMobile(e.matches);
+    };
+
+    handleChange(mediaQuery); // Set initial value
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
 
   const getImagesForCommunity = (label: string) => {
     return transformedImages.find((item) => item.label === label)?.images ?? [];
   };
 
   return (
-    <Section>
+    <Section id={sectionId}>
       <Container>
         <SectionWrapper>
           <SectionHeadline>{slice.primary.headline}</SectionHeadline>
           <div className="flex gap-10 self-stretch">
             <Accordion
-              type="single"
+              type={"single"}
+              collapsible={isMobile}
               defaultValue={defaultCommunity}
               value={selectedCommunity}
-              onValueChange={(value) =>
-                setSelectedCommunity(value || defaultCommunity)
-              }
+              onValueChange={setSelectedCommunity}
               className="flex w-full flex-col gap-5 self-stretch text-[var(--text-primary)]"
             >
               {slice.primary.communities.map((item, index) => (
@@ -57,6 +74,17 @@ const Default: FC<DefaultProps> = ({ slice, index, slices, context }) => {
                     <ScrollableImages
                       images={getImagesForCommunity(item.label ?? "")}
                     />
+                    {isFilled.link(item.external_link) && (
+                      <PrismicNextLink
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        field={item.external_link}
+                        className="lg:justify-end lg:pr-5 flex justify-center items-center label-sm pt-4 gap-2 text-primary"
+                      >
+                        Visit {item.label}
+                        <ArrowRight className="h-4 w-4" />
+                      </PrismicNextLink>
+                    )}
                   </AccordionContent>
                 </AccordionItem>
               ))}
