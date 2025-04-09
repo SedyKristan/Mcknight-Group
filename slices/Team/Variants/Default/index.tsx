@@ -15,7 +15,7 @@ const Default = ({ slice, index, slices, context }: TeamProps) => {
   return (
     <Section
       id={sectionId}
-      className="relative overflow-hidden px-0"
+      className="relative overflow-hidden px-0 lg:px-0"
       style={{ background: "var(--team-gradient)" }}
     >
       <Image

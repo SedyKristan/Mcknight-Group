@@ -13,11 +13,11 @@ const Card = ({
   return (
     <CardModal card={card}>
       <div className="flex flex-col w-[276px] hover:-translate-y-1 cursor-pointer transition-all duration-150 ease-in-out h-[405px] overflow-hidden rounded-2xl border border-ghost-primary-40 shadow-[var(--drop-shadow-md)]">
-        <div className="self-stretch flex-[1_0_0] bg-white">
+        <div className="self-stretch flex-[1_0_0] bg-white relative">
           {card.portrait && (
             <PrismicImage
               field={card.portrait}
-              className="h-full object-cover"
+              className="h-full min-h-full max-h-full absolute object-cover"
             />
           )}
         </div>

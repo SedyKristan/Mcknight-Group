@@ -16,7 +16,6 @@ import ScrollableImages from "../../components/ScrollableImages";
 import CarouselImages from "../../components/CarouselImages";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { PrismicNextLink } from "@prismicio/next";
 
 export type DefaultProps = SliceComponentProps<Content.CommunitiesSlice>;
 
@@ -42,6 +41,14 @@ const Default: FC<DefaultProps> = ({ slice, index, slices, context }) => {
 
   const getImagesForCommunity = (label: string) => {
     return transformedImages.find((item) => item.label === label)?.images ?? [];
+  };
+
+  const getExternalUrl = (link: any) => {
+    const url = asLink(link);
+    if (!url) return "#";
+    return url.startsWith("http://") || url.startsWith("https://")
+      ? url
+      : `https://${url}`;
   };
 
   return (
@@ -75,15 +82,15 @@ const Default: FC<DefaultProps> = ({ slice, index, slices, context }) => {
                       images={getImagesForCommunity(item.label ?? "")}
                     />
                     {isFilled.link(item.external_link) && (
-                      <PrismicNextLink
+                      <a
+                        href={getExternalUrl(item.external_link)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        field={item.external_link}
-                        className="lg:justify-end lg:pr-5 flex justify-center items-center label-sm pt-4 gap-2 text-primary"
+                        className="lg:justify-end cursor-pointer lg:pr-5 flex justify-center items-center label-sm pt-4 gap-2 text-primary"
                       >
                         Visit {item.label}
                         <ArrowRight className="h-4 w-4" />
-                      </PrismicNextLink>
+                      </a>
                     )}
                   </AccordionContent>
                 </AccordionItem>
