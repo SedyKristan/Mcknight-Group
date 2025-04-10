@@ -24,7 +24,7 @@ const backgroundVariants = {
 const AnimatedBackgroundPattern: FC = () => {
   return (
     <motion.div
-      className="absolute inset-0"
+      className="absolute inset-0 scale-[3.1] lg:scale-[1]"
       initial="hidden"
       animate="visible"
       variants={backgroundVariants}
