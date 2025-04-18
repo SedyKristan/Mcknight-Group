@@ -9,7 +9,8 @@ import {
 } from "@/components/ui/dialog";
 import { Simplify } from "@/prismicio-types";
 import { asText, Content } from "@prismicio/client";
-import { PrismicImage, PrismicRichText } from "@prismicio/react";
+import { PrismicImage } from "@prismicio/react";
+import { PrismicRichText } from "@/components/PrismicRichText";
 
 const CardModal = ({
   card,
@@ -38,7 +39,9 @@ const CardModal = ({
             )}
           </DialogHeader>
           {card.details && (
-            <DialogDescription>{asText(card.details)}</DialogDescription>
+            <div className="!max-h-[300px] overflow-y-auto pr-4">
+              <PrismicRichText field={card.details} />
+            </div>
           )}
         </div>
       </DialogContent>

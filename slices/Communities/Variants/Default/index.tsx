@@ -88,7 +88,9 @@ const Default: FC<DefaultProps> = ({ slice, index, slices, context }) => {
                         rel="noopener noreferrer"
                         className="lg:justify-end cursor-pointer lg:pr-5 flex justify-center items-center label-sm pt-4 gap-2 text-primary"
                       >
-                        Visit {item.label}
+                        {item.external_link.text
+                          ? item.external_link.text
+                          : `Visit ${item.label}`}
                         <ArrowRight className="h-4 w-4" />
                       </a>
                     )}
