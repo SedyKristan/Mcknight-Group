@@ -39,7 +39,7 @@ const CardModal = ({
             )}
           </DialogHeader>
           {card.details && (
-            <div className="!max-h-[300px] overflow-y-auto pr-4">
+            <div className="max-h-[210px] lg:max-h-[300px] overflow-y-auto pr-4">
               <PrismicRichText field={card.details} />
             </div>
           )}
